@@ -4,6 +4,7 @@
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
+  background-size: 100%;
 }
 
 body {
@@ -24,7 +25,7 @@ img {
 }
 
 .top__container {
-  width: 1600px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -392,7 +393,7 @@ span.h2pink {
 
 .footer__info {
   height: 341px;
-  width: 1600px;
+  width: 100%;
   margin: auto;
   background: #222224;
   margin-top: 95px;
@@ -541,7 +542,7 @@ span.h2pink {
 
 .footer__navbar {
   height: 79px;
-  width: 1600px;
+  width: 100%;
   margin: 0 auto;
   align-items: center;
   background: #222224;

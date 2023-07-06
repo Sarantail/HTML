@@ -584,6 +584,40 @@ span.h2pink {
   color: #f16d7f;
 }
 
+.page {
+  padding-top: 48px;
+  padding-bottom: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.page__numbers {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #ebebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 17px;
+  font-size: 16px;
+  font-weight: 300;
+}
+.page__number {
+  color: #c4c4c4;
+}
+.page__number:hover {
+  color: #f16d7f;
+  transition: all 0.3s ease;
+}
+.page__arrow:hover path {
+  fill: #f16d7f;
+  transition: all 0.3s ease;
+}
+
 .all__prod__button {
   margin-top: 48.5px;
   margin-bottom: 60px;

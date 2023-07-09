@@ -1,0 +1,491 @@
+//Шрифты
+$font-900: 900;
+$font-700: 700;
+$font-400: 400;
+$font-300: 300;
+
+//Цвета
+$generalColor: #f16d7f;
+$generalLightColor: #ffffff;
+$generalBackgroundColor: #222222;
+
+//Плавность
+$transition: all 0.3s ease;
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+@mixin flex-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-center-between {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-size: 100%;
+}
+
+body {
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    background: $generalLightColor;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-height: 306px;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.top__container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.head__navbar {
+    background-color: $generalBackgroundColor;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+
+    & button {
+        background-color: $generalBackgroundColor;
+        border: none;
+    }
+}
+
+/* hamburger */
+#menu__toggle {
+    opacity: 0;
+}
+
+#menu__toggle:checked~.menu__box {
+    right: 0 !important;
+}
+
+.menu__btn {
+    padding-right: 25px;
+
+    &>span,
+    &>span::before,
+    &>span::after {
+        display: block;
+        position: absolute;
+        width: 32px;
+        height: 3px;
+        background-color: #e8e8e8;
+        transition-duration: 0.25s;
+    }
+
+    &>span {
+        margin-top: -5px;
+        padding-right: 10px;
+    }
+
+    &>span::before {
+        content: "";
+        top: -10px;
+    }
+
+    &>span::after {
+        content: "";
+        top: 10px;
+    }
+}
+
+.menu__box {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 75px;
+    right: -200%;
+    width: 232px;
+    height: 634px;
+    margin: 0;
+    padding-top: 32px;
+    padding-left: 33px;
+    list-style: none;
+    background-color: $generalLightColor;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    transition-duration: 0.25s;
+    z-index: 10;
+
+    & h2 {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+    }
+
+    & h3 {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: $generalColor;
+        padding-top: 20px;
+    }
+}
+
+.menu__item {
+    display: block;
+    padding-left: 20px;
+    padding-top: 12px;
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6f6e6e;
+    transition-duration: 0.25s;
+}
+
+/* end hamburger */
+.header {
+    background: #f1e4e6;
+    background-size: 100%;
+    position: relative;
+    @include flex-center-between;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 111px;
+    padding-top: 18px;
+    padding-bottom: 19px;
+    margin-left: 231px;
+}
+
+.head__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 159px;
+    margin-right: 240px;
+    padding-top: 26px;
+    padding-bottom: 20px;
+
+    &__title {
+        background-color: #f1e4e6;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 764px;
+    }
+}
+
+.image {
+    max-height: 306px;
+}
+
+.title {
+    font-family: "Lato";
+    font-weight: 400;
+    color: #f16d7f;
+    font-size: 24px;
+    padding: 60px 0;
+}
+
+.center {
+    padding-left: calc(50% - 570px);
+    padding-right: calc(50% - 570px);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: "Lato";
+    &__name {
+            font-size: 16px;
+            color: #222;
+            font-weight: $font-300;
+            line-height: 19px;
+    }
+        &__input {
+            width: 360px;
+            height: 45px;
+            box-sizing: border-box;
+            border: 1px solid #a4a4a4;
+            padding-left: 17px;
+            &::-webkit-input-placeholder {
+                color: #b1b1b1;
+            }
+}
+    &__radio {
+        margin-top: 12px;
+        margin-bottom: 12px;
+        display: flex;
+        gap: 10px;
+        &-indent {
+            margin-right: 10px;
+            font-size: 11px;
+            font-weight: $font-300;
+        }
+        &-size {
+            width: 17px;
+            height: 17px;
+        }
+}
+    &__details {
+        font-size: 16px;
+        font-weight: 300;
+        color: #222;
+}
+    &__text {
+        font-size: 13px;
+        font-weight: 300;
+        color: #b1b1b1;
+        margin-bottom: 19px;
+        width: 360px;
+    }
+        &__button {
+            width: 167px;
+            padding: 17px 29px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            color: #fff;
+            background: $generalColor;
+            outline: none;
+            border: none;
+            &-name {
+                font-size: 14px;
+                font-weight: 400;
+            }
+            &:hover {
+                color: $generalColor;
+                background: #fff;
+                box-shadow: 0px 0px 2px $generalColor;
+            }
+            &:hover path {
+                fill: $generalColor;
+            }
+        }
+}
+
+.reg-form {
+    display: flex;
+    flex-direction: row;
+    padding-top: 64px;
+    padding-bottom: 96px;
+    gap: 128px;
+    font-family: "Lato";
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+    }
+    &__head {
+        color: #000000;
+        font-size: 24px;
+        font-weight: 300;
+    }
+        &__ul {
+            list-style-image: url("./img/Vector1.svg");
+            text-indent: 23px;
+            padding-left: 26px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+            &__li {
+                font-size: 24px;
+                font-weight: 300;
+                color: #000000;
+}
+    &__text {
+        color: #000000;
+        font-size: 24px;
+        font-weight: 300;
+    }
+}
+
+
+
+.footer__subscribe {
+    height: 448px;
+    background-image: url(./img/footer\ font.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &__info {
+        width: 360px;
+        height: 225px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__info p {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: #222224;
+        height: 99px;
+    }
+}
+
+.footer__blur {
+    background: rgba(244, 244, 244, 0.7);
+    height: 448px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 223px;
+}
+
+.footer__subsc_subsc {
+    width: 557px;
+    height: 142px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    &__text {
+        text-align: center;
+    }
+
+    &__text h2 {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 40px;
+        color: #222224;
+    }
+
+    &__text p {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        color: #222224;
+    }
+}
+
+
+.footer__subsc__form__btn form {
+    width: 356px;
+    height: 49px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__subsc__form__btn input {
+    width: 256px;
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #222224;
+    opacity: 0.67;
+    background: #E1E1E1;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding-left: 22px;
+    border: none;
+}
+
+.footer__subsc__form__btn button {
+    width: 100px;
+    height: 49px;
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: $generalLightColor;
+    background: $generalColor;
+    cursor: pointer;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    vertical-align: middle;
+    padding-left: 15px;
+    border: none;
+}
+
+.footer__navbar {
+    height: 79px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    background: #222224;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    & p {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FBFBFB;
+        margin-left: 235px;
+    }
+
+    &__icons {
+        width: 148px;
+        height: 32px;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 230px;
+    }
+
+    &__icons a {
+        display: flex;
+        font-size: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.fa {
+    width: 31px;
+    height: 32px;
+    background: $generalLightColor;
+    color: #000000;
+
+    &:hover {
+        background: $generalColor;
+        color: $generalLightColor;
+    }
+}

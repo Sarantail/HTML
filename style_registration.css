@@ -440,4 +440,57 @@ img {
 .fa:hover {
   background: #f16d7f;
   color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .top__container {
+    background-size: 100%;
+  }
+  .logo {
+    margin-left: 32px;
+  }
+  .head__buttons {
+    margin-right: 32px;
+    align-items: center;
+  }
+  .title {
+    margin-left: 32px;
+  }
+  .reg-form {
+    gap: 22px;
+  }
+  .form {
+    padding-left: 16px;
+  }
+  .reg-form__info {
+    padding-right: 16px;
+  }
+  .footer__subscribe {
+    height: 693px;
+    background-size: 300%;
+    background-position: left;
+  }
+  .footer__blur {
+    background-size: 100%;
+    height: 693px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+  }
+  .footer__navbar {
+    width: 100%;
+  }
+  .footer__navbar p {
+    margin-left: 32px;
+  }
+  .footer__navbar__icons {
+    margin-right: 23px;
+  }
 }/*# sourceMappingURL=style_registration.css.map */

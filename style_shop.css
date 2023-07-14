@@ -18,11 +18,6 @@ a {
   color: #636363;
 }
 
-.container {
-  width: 1140px;
-  margin: 0 auto;
-}
-
 .top__container {
   width: 100%;
   margin: 0 auto;
@@ -351,7 +346,7 @@ a {
   fill: #ffffff;
 }
 
-.container {
+.container-block {
   width: 1140px;
   margin: 0 auto;
 }
@@ -943,82 +938,49 @@ a {
 }
 
 @media (max-width: 1024px) {
-  .container {
-    width: 736px;
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
   }
   .top__container {
-    width: 768px;
+    background-size: 100%;
   }
   .logo {
     margin-left: 32px;
   }
   .head__buttons {
     margin-right: 32px;
+    align-items: center;
   }
-  .head__title {
-    height: 368px;
+  .title {
+    margin-left: 32px;
   }
-  .image {
-    min-width: 386px;
+  .product-link {
+    margin-right: 32px;
   }
-  .right__side__head {
-    display: flex;
-    flex-direction: row;
-    margin-left: 39px;
-    margin-top: 138px;
-    margin-bottom: 138px;
-    margin-right: 33px;
-    width: 311px;
-    height: 92px;
-  }
-  .text {
-    font-size: 44px;
-    line-height: 0.9;
-  }
-  span.h2 {
-    font-size: 24px;
-    line-height: 28px;
-  }
-  .top__cards {
-    height: 303px;
-    gap: 20px;
-  }
-  .products {
-    margin-top: 110px;
-  }
-  .main__title p {
-    margin-top: 3px;
+  .wrap-blok {
+    padding: 40px 106px;
   }
   .all__cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
     gap: 16px;
-    margin-top: 72px;
+    justify-content: center;
+    margin: 72px 16px;
   }
-  .all__prod__button {
-    margin-top: 33px;
-    margin-bottom: 65px;
+  .product__card3 {
+    visibility: hidden;
+    display: none;
   }
-  .footer__info {
-    height: 610px;
-    width: 768px;
-    margin-top: 65px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 48px;
-  }
-  .footer__info__card {
-    margin: 0 auto;
+  .card__text {
+    width: 360px;
   }
   .footer__subscribe {
     height: 693px;
-    width: 768px;
-    margin: 0 auto;
-    background-size: cover;
+    background-size: 300%;
+    background-position: left;
   }
   .footer__blur {
+    background-size: 100%;
     height: 693px;
     display: flex;
     flex-direction: column;
@@ -1027,147 +989,12 @@ a {
     gap: 48px;
   }
   .footer__navbar {
-    width: 768px;
+    width: 100%;
   }
   .footer__navbar p {
     margin-left: 32px;
   }
   .footer__navbar__icons {
     margin-right: 23px;
-  }
-}
-@media (min-width: 320px) and (max-width: 767px) {
-  .container {
-    width: 359px;
-  }
-  .top__container {
-    width: 375px;
-  }
-  .logo {
-    margin-left: 16px;
-  }
-  .head__buttons {
-    width: 32px;
-    margin-right: 26px;
-    overflow-x: hidden;
-  }
-  .image {
-    display: none;
-  }
-  .right__side__head {
-    display: flex;
-    flex-direction: row;
-    margin-left: 56px;
-    margin-top: 148px;
-    margin-bottom: 149px;
-    margin-right: 56px;
-    width: 263px;
-    height: 66px;
-  }
-  .rectangle {
-    height: 61px;
-    margin-right: 15px;
-  }
-  .text {
-    padding-top: 6px;
-    font-size: 38px;
-    line-height: 0.7;
-  }
-  span.h2 {
-    font-size: 20px;
-    line-height: 24px;
-  }
-  .top__cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 343px;
-    height: auto;
-    margin: auto;
-    margin-top: 64px;
-    gap: 32px;
-  }
-  .top__card__big {
-    grid-area: 4/1/5/2;
-    height: 111px;
-  }
-  .top__card__big img {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-  }
-  .products {
-    margin-top: 64px;
-  }
-  .all__cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin-top: 64px;
-  }
-  .all__prod__button {
-    margin-top: 41px;
-  }
-  .footer__info {
-    width: 375px;
-    gap: 46px;
-  }
-  .footer__subscribe {
-    height: 550px;
-    width: 375px;
-  }
-  .footer__blur {
-    height: 550px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 48px;
-  }
-  .footer__navbar {
-    width: 375px;
-    height: 143px;
-    flex-direction: column-reverse;
-  }
-  .footer__navbar p {
-    margin-left: 0px;
-    margin-bottom: 9px;
-  }
-  .footer__navbar__icons {
-    margin-right: 0px;
-    margin-top: 43px;
-  }
-  .footer__subscribe__info {
-    width: 343px;
-    height: 194px;
-    justify-content: space-between;
-  }
-  .footer__subscribe__info p {
-    height: 73px;
-    font-size: 18px;
-  }
-  .footer__subsc_subsc {
-    width: 341px;
-    height: 123px;
-  }
-  .footer__subsc_subsc__text {
-    text-align: center;
-  }
-  .footer__subsc_subsc__text h2 {
-    line-height: 36px;
-  }
-  .footer__subsc_subsc__text p {
-    font-size: 14px;
-    line-height: 21.45px;
-  }
-  .footer__subsc__form__btn form {
-    width: 341px;
-    height: 47px;
-  }
-  .footer__subsc__form__btn input {
-    width: 245px;
-  }
-  .footer__subsc__form__btn button {
-    width: 95.7px;
-    height: 47px;
   }
 }/*# sourceMappingURL=style_shop.css.map */

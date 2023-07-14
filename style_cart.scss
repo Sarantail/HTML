@@ -202,6 +202,7 @@ img {
     color: #f16d7f;
     font-size: 24px;
     padding: 60px 0;
+    font-family: Lato;
 }
 .center {
     padding-left: calc(50% - 570px);
@@ -239,6 +240,8 @@ img {
     margin-top: 13px;
     width: 360px;
     margin-bottom: 57px;
+    font-style: normal;
+    font-family: Lato;
     
     &_shipping {
         display: flex;
@@ -387,6 +390,7 @@ img {
     padding: 40px 34px;
     text-align: center;
     justify-content: center;
+    font-family: Lato;
 
     &_summ {
         text-align: right;
@@ -612,5 +616,94 @@ img {
     &:hover {
         background: $generalColor;
         color: $generalLightColor;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .top__container {
+        background-size: 100%;
+    }
+
+    .logo {
+        margin-left: 32px;
+    }
+
+    .head__buttons {
+        margin-right: 32px;
+    }
+
+    .head__title {
+        height: 368px;
+    }
+
+    .title {
+        margin-left: 32px;
+    }
+
+    .product-link {
+        padding-right: 32px;
+    }
+
+    .cart_center {
+        flex-direction: column;
+    }
+
+    .cart_left {
+        margin: auto;
+        padding: 64px;
+    }
+
+    .cart_rigth {
+        display: flex;
+        flex-direction: row;
+        padding-top: 0;
+    }
+
+    .footer__info {
+        height: 610px;
+        margin-top: 65px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+    }
+
+    .footer__info__card {
+        margin: 0 auto;
+    }
+
+    .footer__subscribe {
+        height: 693px;
+        background-size: 300%;
+        background-position: left;
+    }
+
+    .footer__blur {
+        background-size: 100%;
+        height: 693px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 48px;
+    }
+
+    .footer__navbar {
+        width: 100%;
+    }
+
+    .footer__navbar p {
+        margin-left: 32px;
+    }
+
+    .footer__navbar__icons {
+        margin-right: 23px;
     }
 }
